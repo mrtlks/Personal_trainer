@@ -6,6 +6,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import moment from 'moment';
 import DeleteIcon from '@material-ui/icons/Delete';
 
+
 export default function TrainingsTable(props){
 
   const [training, setTrainings] = useState([]);
@@ -94,6 +95,7 @@ const columns =[
       <div>
         <ReactTable filterable={true} data={training}  columns={columns} />
         
+
         <Snackbar
         anchorOrigin={{
           vertical: 'bottom',

@@ -1,11 +1,10 @@
+
 import Paper from '@material-ui/core/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
 import { Scheduler, DayView, WeekView, MonthView, Toolbar,DateNavigator, TodayButton,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import React, { useState, useEffect } from 'react';
 
-
-import './App.css';
 
 export default function Kalenteri () {
 
@@ -24,7 +23,6 @@ export default function Kalenteri () {
 
   
 
-
         return (
           <Paper>
             <Scheduler
@@ -32,10 +30,11 @@ export default function Kalenteri () {
             >
                 
               <ViewState
-                defaultCurrentDate="2020-08-17"
+                defaultCurrentDate="2018-07-27"
               />
               <DayView />
-              
+              <WeekView />
+              <MonthView />
               <Toolbar />
               <DateNavigator />
               <TodayButton />

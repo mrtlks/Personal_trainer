@@ -10,7 +10,7 @@ import TrainingsTable from './components/Trainingslist';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
-import Kalenteri from './Calendar';
+import Kalenteri from './components/Scheduler';
 
 function App() {
 
