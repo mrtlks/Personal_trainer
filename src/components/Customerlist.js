@@ -93,9 +93,11 @@ const updateCustomer =(customer, link) => {
       .catch(err => console.error(err))
   }
   
+  console.log(customers)
     
 
 const columns =[
+  
 { 
    Header: 'Actions',
    accessor: 'actions',
@@ -111,12 +113,14 @@ const columns =[
   filterable: false,
   width: 80,
   Cell: row => <Editcustomer updateCustomer={updateCustomer} customer={row.original}/>
+  
 },
 {
   sortable: false,
   filterable: false,
   width: 80,
-  Cell: row => <Addtraining saveTraining={saveTraining} customer={row.original}/>
+  Cell: row => <Addtraining saveTraining={saveTraining}  customer={row.customer}/>
+ /* Cell: ({index}) => <button id={index} onClick={deletePressed} > Delete</button> */
 },
 
 {
@@ -158,7 +162,7 @@ const columns =[
   return(
       <div>
           <Addcustomer saveCustomer={saveCustomer}/>
-          <Addtraining saveTraining={saveTraining}/>
+        
         <ReactTable filterable={true} data={customers} columns={columns} />
         <Snackbar
         anchorOrigin={{

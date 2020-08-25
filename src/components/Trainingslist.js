@@ -10,7 +10,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 export default function TrainingsTable(props){
 
   const [training, setTrainings] = useState([]);
-
+  const [customer, setCustomer] = useState([]);
 
   useEffect(() => fetchData(), []);
   const [open, setOpen] = React.useState(false); 
@@ -87,8 +87,9 @@ const columns =[
   },
   {
     Header: 'Customer',
-    accessor: 'links[2].href'
-  },
+    accessor:'links[2].href' 
+  }
+  
 ]
 
   return(
